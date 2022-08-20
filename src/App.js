@@ -3,6 +3,7 @@ import './App.css';
 import ComponentReact from './JSX/class'
 import ComponentJSX from './JSX/jsx'
 import Clock from './clock/clock'
+import ExampleState from './hooks/useState'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <header className="App-header">
 
         <Clock />
+        <ExampleState />
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
