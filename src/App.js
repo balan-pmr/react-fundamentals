@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ComponentReact from './JSX/class'
 import ComponentJSX from './JSX/jsx'
@@ -6,53 +6,38 @@ import Clock from './clock/clock'
 import ExampleState from './hooks/useState'
 import WarnBanner from './warn/warn-banner'
 import Calculator from './convert-temperature/calculator'
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Navigation  from './layout/Navigation';
+import Home  from './layout/Home';
 
 
 function App() {
+  
+  let centered = {position: "absolute",
+  left: "50%",
+  top: "10%"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        
+    <div style={centered}>
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<Navigation />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/warn" element={<WarnBanner />} />
+          <Route path="/example-state" element={<ExampleState />} />
+          <Route path="/clock" element={<Clock />} />
+          <Route path="/jsx" element={<ComponentJSX />} />
+          <Route path="/react" element={<ComponentReact />} />
 
-        <Calculator/>
-
-        <WarnBanner/>
-
-        <Clock />
-        <ExampleState />
-
-        <ComponentReact />
-
-        <ComponentJSX />
-        
-        <Clock message={'This is a custom message'} />
-
-        {bodyExample}
-
-      </header>
+          <Route path="*" element={<p>Path not resolved</p>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
+
 }
 
-// render by add {bodyExample} into return 
-
-let bodyExample = <div>
-
-<img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-</div>
-
-console.log(bodyExample)
 
 export default App;
