@@ -9,7 +9,7 @@ function Clock(props) {
 
     return (
         <div>
-            I am a clock with a message {message} and time is {time}
+            I am a clock with a message {message}, and the time is <strong>{time}</strong>
         </div>
     );
 
