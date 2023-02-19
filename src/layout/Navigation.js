@@ -4,24 +4,27 @@ import {Link} from "react-router-dom";
 export default function Navigation(){
     
     const pathsObject = [
-        {"/home": "Home"},
         {"/calculator": "Calculator"},
         {"/warn": "Warn Banner"},
-        {"/example-state": "Example State"},
+        {"/example-state": "Example useState() hook"},
         {"/clock": "Clock"},
         {"/jsx": "Componnet with JSX"},
-        {"/react": "Componnet with Create.Component"}
+        {"/react": "Componnet with Create.Component"},
+        {"/example-1": "Code Example 1 : Passing props to child"},
+        {"/2": "Code Example 2 : Passing props to a wrapped child"}
+                
     ]
 
+    let index = 0;
     const pathsApp = pathsObject.map(object => {
-        for (const [key, value] of Object.entries(object)) {
-            return(
-                <li>
-                <Link to={key} >{value}</Link>
-                </li>
-            )
+        let htmlElement;
+        for (const [key, value] of Object.entries(object)) {           
+                htmlElement= <li key={++index}  > <Link to={key}>{value}</Link> </li>
         }
+        return htmlElement;
     })
+
+    console.log(pathsApp)
 
     return (
         <nav>
