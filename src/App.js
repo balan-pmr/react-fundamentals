@@ -17,6 +17,7 @@ import ConnectAPI from './code-examples/example-tree/connectWithAPI';
 import CleanComponent from './code-examples/example-four/useEffect-clean-component';
 import ExampleUseContext from './hooks/useContext'
 import ExampleUseRef  from './hooks/useRef'
+import ExampleUseMemo  from './hooks/useMemo'
 
 function App() {
   
@@ -36,6 +37,7 @@ function App() {
           <Route path="/example-useEffect" element={<ExampleEffect/>} />
           <Route path="/example-useContext" element={<ExampleUseContext/>} />
           <Route path="/example-useRef" element={<ExampleUseRef/>} />
+          <Route path="/example-useMemo" element={<ExampleUseMemo/>} />          
           <Route path="/life" element={<LifeCycles/>} />                    
           <Route path="/clock" element={<Clock />} />
           <Route path="/jsx" element={<ComponentJSX />} />

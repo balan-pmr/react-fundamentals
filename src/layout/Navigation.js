@@ -10,6 +10,7 @@ export default function Navigation(){
         {"/example-useEffect": "Example useEffect() hook"},
         {"/example-useContext": "Example useContext() hook"},
         {"/example-useRef": "Example useRef() hook"},
+        {"/example-useMemo": "Example useMemo() hook"},
         {"/life": "Example useEffect() as Life Cycle Events"},        
         {"/clock": "Clock"},
         {"/jsx": "Componnet with JSX"},
