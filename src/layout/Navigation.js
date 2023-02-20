@@ -6,15 +6,18 @@ export default function Navigation(){
     const pathsObject = [
         {"/calculator": "Calculator"},
         {"/warn": "Warn Banner"},
-        {"/example-state": "Example useState() hook"},
-        {"/effect": "Example useEffect() hook"},
+        {"/example-useState": "Example useState() hook"},
+        {"/example-useEffect": "Example useEffect() hook"},
+        {"/example-useContext": "Example useContext() hook"},
+        {"/example-useRef": "Example useRef() hook"},
         {"/life": "Example useEffect() as Life Cycle Events"},        
         {"/clock": "Clock"},
         {"/jsx": "Componnet with JSX"},
         {"/react": "Componnet with Create.Component"},
         {"/example-1": "Code Example 1 : Passing props to child"},
-        {"/2": "Code Example 2 : Passing props to a wrapped child"},
-        {"/3": "Code Example 3 : Connect with an API "}                
+        {"/example-2": "Code Example 2 : Passing props to a wrapped child"},
+        {"/example-3": "Code Example 3 : Connect with an API "}, 
+        {"/example-4": "Code Example 4 : Examples using useEffect() hook "}                
     ]
 
     let index = 0;
@@ -26,7 +29,7 @@ export default function Navigation(){
         return htmlElement;
     })
 
-    console.log(pathsApp)
+    //console.log(pathsApp)
 
     return (
         <nav>

@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function ExampleState(props) {
 
     const [counter, setCounter] = useState(0);
-    const increment = (event) => { setCounter(counter+1) }
+    const increment = () => { setCounter(counter+1) }
 
     return (
         <div>
